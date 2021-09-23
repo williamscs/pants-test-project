@@ -2,7 +2,7 @@
 # Licensed under the Apache License, Version 2.0 (see LICENSE).
 
 [GLOBAL]
-pants_version = "2.6.0"
+pants_version = "2.8.0.dev2"
 backend_packages.add = [
   "pants.backend.google_cloud_function.python",
   "pants.backend.codegen.protobuf.python",
@@ -39,3 +39,6 @@ interpreter_search_paths = ["<PATH>", "<PYENV>"]
 # See https://www.pantsbuild.org/docs/protobuf.
 runtime_dependencies = ["//:protobuf"]
 mypy_plugin = true
+
+[python-infer]
+inits = true
