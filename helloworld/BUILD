@@ -29,8 +29,9 @@ pex_binary(
 #  See https://www.pantsbuild.org/docs/awslambda-python.
 #
 # Note: This has sdist dependencies, so it must be built on Linux.
-python_awslambda(
-    name="awslambda",
-    handler="awslambda.py:handler",
-    runtime="python3.7",
+python_google_cloud_function(
+    name="cloud_function",
+    handler="python_google_cloud_function.py:handler",
+    runtime="python39",
+    type="event",
 )
